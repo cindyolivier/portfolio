@@ -8,7 +8,7 @@ const useStyles = makeStyles((currentTheme: Theme) =>
     root: {
       textDecoration: "none",
       color: "#fff",
-      border: "1px solid black",
+      border: "0.1rem solid black",
       borderRadius: "100%",
       backgroundColor: "black",
       padding: "1rem",
@@ -16,7 +16,7 @@ const useStyles = makeStyles((currentTheme: Theme) =>
       "&:hover": {
         color: "#fff",
         backgroundColor: currentTheme.palette.secondary.main,
-        border: "1px solid #7f9fac",
+        border: "0.1rem solid #7f9fac",
       },
     },
   })
@@ -25,9 +25,11 @@ const useStyles = makeStyles((currentTheme: Theme) =>
 const FavButton = ({
   startIcon,
   href,
+  title,
 }: {
   startIcon: React.ReactNode;
   href: string;
+  title: string;
 }) => {
   const classes = useStyles();
 
@@ -37,6 +39,8 @@ const FavButton = ({
       className={classes.root}
       href={href}
       target="blank"
+      title={title}
+      aria-label={title}
     >
       {startIcon}
     </IconButton>

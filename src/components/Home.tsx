@@ -14,8 +14,8 @@ const useStyles = makeStyles((currentTheme: Theme) =>
     },
 
     title: {
-      padding: "18px",
-      letterSpacing: "10px",
+      padding: "1.4rem",
+      letterSpacing: "0.6rem",
     },
 
     root: {

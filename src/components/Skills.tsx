@@ -1,24 +1,12 @@
 import React from "react";
 
+import Title from "./Title";
+
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((currentTheme: Theme) =>
   createStyles({
-    root: {
-      padding: "2rem 0",
-      backgroundColor: currentTheme.palette.background.paper,
-    },
-
-    title: {
-      borderBottom: "1px solid",
-      paddingBottom: "1rem",
-      letterSpacing: "8px",
-      [currentTheme.breakpoints.down("md")]: {
-        textAlign: "center",
-      },
-    },
-
     sectionCompetences: {
       paddingTop: "4rem",
       listStyleType: "none",
@@ -44,26 +32,19 @@ const useStyles = makeStyles((currentTheme: Theme) =>
   })
 );
 
-const CompetencesTechniques = () => {
+const Skills = () => {
   const classes = useStyles();
 
   return (
-    <Grid
-      container
-      justify="space-around"
-      alignItems="center"
-      direction="column"
-      className={classes.root}
-    >
+    <Grid container justify="center">
       <Grid item>
-        <Typography variant="h3" className={classes.title}>
-          Compétences techniques
-        </Typography>
+        <Title title="Compétences techniques"></Title>
       </Grid>
 
       <Grid
         container
         item
+        xs={12}
         justify="space-around"
         className={classes.sectionCompetences}
       >
@@ -174,23 +155,4 @@ const CompetencesTechniques = () => {
     </Grid>
   );
 };
-export default CompetencesTechniques;
-
-/* <div>
-          <H3>Langues :</H3>
-          <ul>
-            <Li>Français : Langue maternelle<<Li>
-            <Li>Anglais : scolaire<<Li>
-            <Li>Espagnol : scolaire<<Li>
-          </ul>
-        </div>
-
-        <div>
-          <H3>Savoir-être :</H3>
-          <ul>
-            <Li>Organisée<<Li>
-            <Li>Persévérante<<Li>
-            <Li>Rigoureuse<<Li>
-            <Li>Discrète<<Li>
-          </ul>
-        </div> */
+export default Skills;

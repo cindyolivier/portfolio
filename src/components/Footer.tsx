@@ -1,19 +1,20 @@
 import React from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import IconLinkedin from "./IconLinkedin";
 import IconGithub from "./IconGithub";
+import FavButton from "./FavButton";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
-import FavButton from "./FavButton";
 
 const useStyles = makeStyles((currentTheme: Theme) =>
   createStyles({
     containerFooter: {
       backgroundImage: `url(${"../images/background1.jpg"})`,
 
-      height: "200px",
+      height: "15rem",
 
       backgroundAttachment: "fixed",
       backgroundPosition: "center",
@@ -21,7 +22,6 @@ const useStyles = makeStyles((currentTheme: Theme) =>
       backgroundSize: "cover",
 
       [currentTheme.breakpoints.down("md")]: {
-        height: "230px",
         backgroundAttachment: "scroll",
       },
     },
@@ -36,8 +36,8 @@ const useStyles = makeStyles((currentTheme: Theme) =>
     textFooter: {
       backgroundColor: "#111",
       color: "#fff",
-      padding: "5px",
-      letterSpacing: "5px",
+      padding: "0.3rem",
+      letterSpacing: "0.5rem",
     },
   })
 );
@@ -60,6 +60,7 @@ const Footer = () => {
           <FavButton
             href="mailto:cindylartillot@gmail.com"
             startIcon={<FontAwesomeIcon icon={faEnvelope} />}
+            title="Contactez-moi"
           />
         </Grid>
 
@@ -67,6 +68,7 @@ const Footer = () => {
           <FavButton
             href="https://www.linkedin.com/in/cindy-olivier-06529bb3/"
             startIcon={<IconLinkedin />}
+            title="Mon LinkedIn"
           />
         </Grid>
 
@@ -74,12 +76,18 @@ const Footer = () => {
           <FavButton
             href="https://github.com/cindyolivier"
             startIcon={<IconGithub />}
+            title="Mon GitHub"
           />
         </Grid>
       </Grid>
       <Grid item xs={12}>
-        <Typography variant="h6" align="center" className={classes.textFooter}>
-          © 2020 - Cindy Olivier - développeuse web junior
+        <Typography
+          variant="h6"
+          component="h1"
+          align="center"
+          className={classes.textFooter}
+        >
+          © 2021 - Cindy Olivier - développeuse web
         </Typography>
       </Grid>
     </Grid>

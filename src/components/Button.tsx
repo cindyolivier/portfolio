@@ -7,7 +7,7 @@ const useStyles = makeStyles((currentTheme: Theme) =>
   createStyles({
     root: {
       textTransform: "none",
-      borderRadius: "20px",
+      borderRadius: "2rem",
       "&:hover": {
         backgroundColor: currentTheme.palette.secondary.main,
       },

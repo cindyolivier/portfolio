@@ -1,22 +1,23 @@
 import React from "react";
 
 import { ThemeProvider } from "@material-ui/core";
-
-import Home from "./components/Home";
-import Description from "./components/Description";
-import CompetencesTechniques from "./components/CompetencesTechniques";
-import Outils from "./components/Outils";
-import ProjetPokemon from "./components/ProjetPokemon";
-import Footer from "./components/Footer";
-import SectionTitle from "./components/SectionTitle";
-import ProjetStaticMap from "./components/ProjetStaticMap";
-import ProjetGraphicCard from "./components/ProjetGraphicCard";
-import currentTheme from "./currentTheme";
 import {
   faDumbbell,
   faProjectDiagram,
 } from "@fortawesome/free-solid-svg-icons";
-import ProjetPortfolio from "./components/ProjetPortfolio";
+
+import Home from "./components/Home";
+import Description from "./components/Description";
+import SectionContent from "./components/SectionContent";
+import Skills from "./components/Skills";
+import Tools from "./components/Tools";
+import ProjectPokemon from "./components/ProjectPokemon";
+import Footer from "./components/Footer";
+import SectionTitle from "./components/SectionTitle";
+import ProjectStaticMap from "./components/ProjectStaticMap";
+import ProjectGraphicCard from "./components/ProjectGraphicCard";
+import currentTheme from "./currentTheme";
+import ProjectPortfolio from "./components/ProjectPortfolio";
 
 function App() {
   return (
@@ -25,13 +26,17 @@ function App() {
         <Home />
         <Description />
         <SectionTitle icon={faDumbbell} title="Mes compétences" />
-        <CompetencesTechniques />
-        <Outils />
+        <SectionContent>
+          <Skills />
+          <Tools />
+        </SectionContent>
         <SectionTitle icon={faProjectDiagram} title="Mes projets" />
-        <ProjetPortfolio />
-        <ProjetPokemon />
-        <ProjetStaticMap />
-        <ProjetGraphicCard />
+        <SectionContent>
+          <ProjectPortfolio />
+          <ProjectPokemon />
+          <ProjectStaticMap />
+          <ProjectGraphicCard />
+        </SectionContent>
         <Footer />
       </ThemeProvider>
     </div>

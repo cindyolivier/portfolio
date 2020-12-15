@@ -10,7 +10,7 @@ const useStyles = makeStyles((currentTheme: Theme) =>
     root: {
       backgroundImage: `url(${"../images/background1.jpg"})`,
 
-      height: "180px",
+      height: "14rem",
 
       backgroundAttachment: "fixed",
       backgroundPosition: "center",
@@ -18,7 +18,6 @@ const useStyles = makeStyles((currentTheme: Theme) =>
       backgroundSize: "cover",
       position: "relative",
       [currentTheme.breakpoints.down("md")]: {
-        height: "210px",
         backgroundAttachment: "scroll",
       },
     },
@@ -26,8 +25,8 @@ const useStyles = makeStyles((currentTheme: Theme) =>
     title: {
       backgroundColor: "#111",
       color: "#fff",
-      padding: "18px",
-      letterSpacing: "10px",
+      padding: "1rem",
+      letterSpacing: "0.6rem",
       opacity: 0.9,
     },
   })

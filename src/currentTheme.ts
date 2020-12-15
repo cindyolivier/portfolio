@@ -3,7 +3,7 @@ import { createMuiTheme } from "@material-ui/core";
 const currentTheme = createMuiTheme({
     typography: {
         h3: {
-            color: "#846a6a",
+            color: "#000000",
             fontFamily: "Playfair Display, serif",
             letterSpacing: "8px",
         },
@@ -39,14 +39,4 @@ const currentTheme = createMuiTheme({
 })
 
 export default currentTheme;
-
-
-// Using breakpoints
-// currentTheme.typography.h4 = {
-//     fontSize: "1.68rem",
-//     [currentTheme.breakpoints.down('md')]: {
-//         fontSize: '2.4rem',
-//     },
-// }
-
 

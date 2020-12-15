@@ -1,26 +1,12 @@
-// comment faire pour enlever l'espace entre les images en responsive
-// comment ajouter une couleur
-// comment ajouter la police en typographie
-
 import React from "react";
+
+import Title from "./Title";
 
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((currentTheme: Theme) =>
   createStyles({
-    root: {
-      backgroundColor: currentTheme.palette.background.paper,
-    },
-
-    title: {
-      borderBottom: "1px solid",
-      paddingBottom: "1rem",
-      [currentTheme.breakpoints.down("md")]: {
-        textAlign: "center",
-      },
-    },
-
     sectionOutils: {
       padding: "4rem 0",
       listStyleType: "none",
@@ -46,21 +32,13 @@ const useStyles = makeStyles((currentTheme: Theme) =>
   })
 );
 
-const CompetencesTechniques = () => {
+const Tools = () => {
   const classes = useStyles();
 
   return (
-    <Grid
-      container
-      justify="space-around"
-      alignItems="center"
-      direction="column"
-      className={classes.root}
-    >
+    <Grid container justify="center">
       <Grid item>
-        <Typography variant="h3" className={classes.title}>
-          Outils
-        </Typography>
+        <Title title="Outils"></Title>
       </Grid>
 
       <Grid
@@ -83,6 +61,22 @@ const CompetencesTechniques = () => {
             color="textPrimary"
           >
             VsCode
+          </Typography>
+        </Grid>
+
+        <Grid item className={classes.outil}>
+          <img
+            className={classes.img}
+            src="../icons/netlify-icon.png"
+            alt="Netlify"
+          />
+          <Typography
+            variant="subtitle1"
+            component="h1"
+            align="center"
+            color="textPrimary"
+          >
+            Netlify
           </Typography>
         </Grid>
 
@@ -117,4 +111,4 @@ const CompetencesTechniques = () => {
     </Grid>
   );
 };
-export default CompetencesTechniques;
+export default Tools;

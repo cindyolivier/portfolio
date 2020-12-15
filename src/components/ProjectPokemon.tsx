@@ -1,20 +1,17 @@
 import React from "react";
-import PokemonCard from "../images/pokemonCard.png";
 
+import PokemonCard from "../images/pokemonCard.png";
 import Button from "./Button";
+import Title from "./Title";
 import IconGithub from "./IconGithub";
 import IconNetlify from "./IconNetlify";
+
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((currentTheme: Theme) =>
   createStyles({
-    root: {
-      padding: "5rem 0",
-      backgroundColor: currentTheme.palette.background.paper,
-    },
-
-    sectionProjet: {
+    sectionProject: {
       [currentTheme.breakpoints.down("md")]: {
         padding: "1rem",
         paddingBottom: "5rem",
@@ -22,8 +19,8 @@ const useStyles = makeStyles((currentTheme: Theme) =>
     },
 
     img: {
-      borderRadius: "20px",
-      width: "20rem",
+      borderRadius: "1rem",
+      width: "18rem",
       height: "auto",
       [currentTheme.breakpoints.down("md")]: {
         height: "100%",
@@ -32,44 +29,39 @@ const useStyles = makeStyles((currentTheme: Theme) =>
 
     text: {
       lineHeight: "1.75",
+      paddingTop: "3rem",
       [currentTheme.breakpoints.down("md")]: {
         paddingTop: "3rem",
       },
     },
 
-    title: {
-      borderBottom: "1px solid",
-      paddingBottom: "1rem",
-      [currentTheme.breakpoints.down("md")]: {
-        textAlign: "center",
-      },
+    button: {
+      display: "flex",
     },
 
     icon: {
-      paddingTop: "3rem",
+      padding: "3rem 1rem 0 1rem",
     },
   })
 );
 
-const ProjetPokemon = () => {
+const ProjectPokemon = () => {
   const classes = useStyles();
 
   return (
-    <Grid container justify="space-around" className={classes.root}>
+    <Grid container justify="space-between">
       <Grid
         container
         item
         xs={12}
-        md={4}
+        md={5}
         justify="space-around"
         alignItems="center"
         direction="column"
-        className={classes.sectionProjet}
+        className={classes.sectionProject}
       >
         <Grid item>
-          <Typography variant="h3" align="center" className={classes.title}>
-            La carte pokémon
-          </Typography>
+          <Title title="La carte pokémon"></Title>
         </Grid>
 
         <Grid item>
@@ -80,14 +72,43 @@ const ProjetPokemon = () => {
             align="justify"
             className={classes.text}
           >
-            Lors de mon stage à Gojob j'ai pu réaliser une carte pokémon
-            dynamique dans mon apprentissage de React et TypeScript. <br />
-            J'ai du faire appel à un serveur API, et j'ai utilisé le package
-            style-component pour le CSS de ce projet.
+            Pour le début de mon stage à Gojob, j’ai commencé par
+            l’apprentissage du langage TypeScript et de la librairie React à
+            travers une petite application React, afin d’afficher une carte
+            dynamique pokémon.
+            <br /> Pour la rendre dynamique, j'ai du faire appel à un serveur
+            API REST (
+            <a href="https://pokeapi.co/" rel="noreferrer" target="_blank">
+              PokéAPI
+            </a>
+            ) pour pouvoir avoir accès aux différentes données de chaque
+            pokémon.
+            <br />
+            Pour réaliser ce projet j'ai dû faire du functional component ce qui
+            m'a permis d’utiliser des hooks tel que useState et useEffect. Pour
+            les requêtes API j'ai utilisé{" "}
+            <a
+              href="https://www.npmjs.com/package/axios"
+              rel="noreferrer"
+              target="_blank"
+            >
+              axios
+            </a>{" "}
+            .
+            <br />
+            J’ai également utilisé le package {""}
+            <a
+              href="https://styled-components.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              styled-component
+            </a>{" "}
+            pour le CSS in JS.
           </Typography>
         </Grid>
 
-        <div>
+        <div className={classes.button}>
           <Grid item className={classes.icon}>
             <Button
               startIcon={<IconGithub />}
@@ -99,7 +120,7 @@ const ProjetPokemon = () => {
           <Grid item className={classes.icon}>
             <Button
               startIcon={<IconNetlify />}
-              href="https://condescending-montalcini-e0a923.netlify.app/"
+              href="https://pokemoncard-cindy.netlify.app"
               title="Netlify"
             />
           </Grid>
@@ -118,4 +139,4 @@ const ProjetPokemon = () => {
     </Grid>
   );
 };
-export default ProjetPokemon;
+export default ProjectPokemon;
