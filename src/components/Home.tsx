@@ -36,7 +36,6 @@ const useStyles = makeStyles((currentTheme: Theme) =>
 
 const Home = () => {
   const classes = useStyles();
-  // const animation = "w3-animate-zoom"; //Problème de className : l'effet ne s'affiche pas
 
   return (
     <Grid
