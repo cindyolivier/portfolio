@@ -113,6 +113,22 @@ const Skills = () => {
         </Grid>
 
         <Grid item className={classes.competence}>
+          <img
+            className={classes.img}
+            src="../icons/sanity_logo.png"
+            alt="Sanity"
+          />
+          <Typography
+            variant="subtitle1"
+            component="h1"
+            align="center"
+            color="textPrimary"
+          >
+            Sanity
+          </Typography>
+        </Grid>
+
+        <Grid item className={classes.competence}>
           <img className={classes.img} src="../icons/php-icon.png" alt="PHP" />
           <Typography
             variant="subtitle1"

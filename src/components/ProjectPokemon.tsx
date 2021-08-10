@@ -23,7 +23,7 @@ const useStyles = makeStyles((currentTheme: Theme) =>
       width: "18rem",
       height: "auto",
       [currentTheme.breakpoints.down("md")]: {
-        height: "100%",
+        height: "auto",
       },
     },
 

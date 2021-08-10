@@ -70,7 +70,7 @@ const Home = () => {
           align="center"
           className={classes.title}
         >
-          Développeuse web junior front-end
+          Développeuse web front-end
         </Typography>
       </Grid>
     </Grid>

@@ -81,7 +81,7 @@ const Description = () => {
               align="justify"
               className={classes.text}
             >
-              Je m'appelle Cindy OLIVIER, j'ai 27 ans et j'habite à{" "}
+              Je m'appelle Cindy OLIVIER, j'ai 28 ans et j'habite à{" "}
               <a
                 href="https://www.google.com/maps/place/13790+Rousset/@43.4869388,5.585218,13z/data=!3m1!4b1!4m5!3m4!1s0x12c99b396e38a4b5:0x40819a5fd970020!8m2!3d43.480621!4d5.622019"
                 rel="noreferrer"
@@ -91,19 +91,23 @@ const Description = () => {
               </a>{" "}
               près de Aix-en-Provence.
               <br />
-              Je me suis réorientée dans le développement vers printemps 2020.
-              J'ai fait la formation 3W Academy à Aix-en-Provence, ou j'ai
-              appris différents langages comme HTML/CSS, MySQL, PHP et
-              JavaScript. <br />
-              J'ai également pu faire un stage de 5 mois à{" "}
+              Je me suis réorientée dans le développement Web début 2020. J'ai
+              fait la formation 3W Academy à Aix-en-Provence, où j'ai appris les
+              bases du web avec des langages comme HTML/CSS, MySQL, PHP et
+              JavaScript. J'ai également pu faire un stage de 6/7 mois à{" "}
               <a href="https://gojob.com/" rel="noreferrer" target="_blank">
                 Gojob
               </a>
-              . Lors de ce stage j'ai appris le langage TypeScript et la
-              librairie React pour lesquels j'ai eu un réel coup de coeur.{" "}
-              <br />
+              , où j'ai appris le langage TypeScript et la librairie React, qui
+              m'ont permis de gagner de l'expérience. <br />
+              Par la suite, pendant plusieurs mois, j'ai réalisé une application
+              web (React / Gatsby) avec un CMS (Sanity) pour mon premier client,
+              pour qu'il puisse avoir une vitrine totalement personnalisé et
+              personnalisable par lui-même. Ayant envie d'en apprendre encore
+              plus dans ce milieu qui me plait tant, je serais ravie de pouvoir
+              travailler à vos côtés et de mettre mes compétences à vos
+              services. <br />
               Dans ce Portfolio je vais vous expliquer ce que j'ai réalisé.
-              <br />
               Ayant envie d'en apprendre encore plus dans ce milieu qui me plait
               tant, je suis particulièrement passionnée par le développement en
               langage TypeScript et avec la bibliothèque React.
@@ -112,7 +116,7 @@ const Description = () => {
           <Grid item>
             <Button
               startIcon={<FontAwesomeIcon icon={faFilePdf} />}
-              href="../documents/CV-2020.pdf"
+              href="../documents/CV-2021.pdf"
               title="Voir mon CV"
             />
           </Grid>

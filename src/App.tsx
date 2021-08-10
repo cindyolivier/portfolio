@@ -18,6 +18,7 @@ import ProjectStaticMap from "./components/ProjectStaticMap";
 import ProjectGraphicCard from "./components/ProjectGraphicCard";
 import currentTheme from "./currentTheme";
 import ProjectPortfolio from "./components/ProjectPortfolio";
+import Ajcourtage from "./components/Ajcourtage";
 
 function App() {
   return (
@@ -32,10 +33,11 @@ function App() {
         </SectionContent>
         <SectionTitle icon={faProjectDiagram} title="Mes projets" />
         <SectionContent>
+          <Ajcourtage />
           <ProjectPortfolio />
-          <ProjectPokemon />
-          <ProjectStaticMap />
           <ProjectGraphicCard />
+          <ProjectStaticMap />
+          <ProjectPokemon />
         </SectionContent>
         <Footer />
       </ThemeProvider>

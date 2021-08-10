@@ -3,14 +3,16 @@ import React from "react";
 import Button from "./Button";
 import Title from "./Title";
 import IconGithub from "./IconGithub";
+import portfolioScreen from "../images/portfolioScreen.png";
 
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((currentTheme: Theme) =>
   createStyles({
-    root: {
+    sectionProject: {
       [currentTheme.breakpoints.down("md")]: {
+        padding: "1rem",
         paddingBottom: "5rem",
       },
     },
@@ -22,7 +24,15 @@ const useStyles = makeStyles((currentTheme: Theme) =>
         paddingTop: "3rem",
       },
     },
-
+    img: {
+      borderRadius: "1rem",
+      width: "22rem",
+      height: "auto",
+      [currentTheme.breakpoints.down("md")]: {
+        height: "auto",
+        
+      },
+    },
     icon: {
       paddingTop: "3rem",
     },
@@ -33,8 +43,17 @@ const ProjectPortfolio = () => {
   const classes = useStyles();
 
   return (
-    <Grid container direction="column" className={classes.root}>
-      <Grid container item xs={12} md={5} justify="center" alignItems="center">
+    <Grid container justify="space-between">
+    <Grid
+      container
+      item
+      xs={12}
+      md={5}
+      justify="space-around"
+      alignItems="center"
+      direction="column"
+      className={classes.sectionProject}
+    >
         <Grid item>
           <Title title="Mon portfolio"></Title>
         </Grid>
@@ -77,6 +96,16 @@ const ProjectPortfolio = () => {
           </Grid>
         </div>
       </Grid>
+      <Grid
+      container
+      item
+      xs={12}
+      md={2}
+      alignContent="center"
+      justify="center"
+    >
+      <img className={classes.img} src={portfolioScreen} alt="AjcourtageSite" />
+    </Grid>
     </Grid>
   );
 };
