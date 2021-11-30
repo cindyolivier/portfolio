@@ -33,7 +33,7 @@ const useStyles = makeStyles((currentTheme: Theme) =>
       backgroundColor: "grey",
       width: "250px",
       height: "50px",
-    }
+    },
   })
 );
 
@@ -113,7 +113,13 @@ const ToolsAdd = () => {
           </Typography>
         </Grid>
       </Grid>
-      <div className={classes.add}></div>
+      <div className={classes.add}>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6397764351388531"
+          crossOrigin="anonymous"
+        ></script>
+      </div>
     </Grid>
   );
 };

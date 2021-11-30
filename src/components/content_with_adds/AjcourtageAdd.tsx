@@ -57,7 +57,13 @@ const AjcourtageAdd = () => {
         alignContent="center"
         justify="center"
       >
-        <div className={classes.add}></div>
+        <div className={classes.add}>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6397764351388531"
+            crossOrigin="anonymous"
+          ></script>
+        </div>
       </Grid>
 
       <Grid

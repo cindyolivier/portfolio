@@ -53,7 +53,7 @@ const useStyles = makeStyles((currentTheme: Theme) =>
       backgroundColor: "grey",
       width: "300px",
       height: "250px",
-    }
+    },
   })
 );
 
@@ -139,8 +139,14 @@ const DescriptionAdd = () => {
             src="../images/img-profil.jpeg"
             alt="profil"
           />
-          
-          <div className={classes.add}></div>
+
+          <div className={classes.add}>
+            <script
+              async
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6397764351388531"
+              crossOrigin="anonymous"
+            ></script>
+          </div>
         </Grid>
       </Grid>
     </Grid>

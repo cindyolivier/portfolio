@@ -44,44 +44,49 @@ const Home = () => {
 
   return (
     <div>
-    <div className={classes.add}></div>
-    <Grid
-      container
-      className={classes.root}
-      justify="center"
-      alignItems="center"
-    >
-      
-      <Grid item xs={12} className={classes.containerText}>
-        <Typography
-          variant="h4"
-          component="h1"
-          color="textSecondary"
-          align="center"
-          className={classes.title}
-        >
-          Cindy Olivier
-        </Typography>
-        <Typography
-          variant="h4"
-          component="h1"
-          color="textSecondary"
-          align="center"
-          className={classes.title}
-        >
-          <FontAwesomeIcon icon={faCode} />
-        </Typography>
-        <Typography
-          variant="h4"
-          component="h1"
-          color="textSecondary"
-          align="center"
-          className={classes.title}
-        >
-          Développeuse web front-end
-        </Typography>
+      <div className={classes.add}>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6397764351388531"
+          crossOrigin="anonymous"
+        ></script>
+      </div>
+      <Grid
+        container
+        className={classes.root}
+        justify="center"
+        alignItems="center"
+      >
+        <Grid item xs={12} className={classes.containerText}>
+          <Typography
+            variant="h4"
+            component="h1"
+            color="textSecondary"
+            align="center"
+            className={classes.title}
+          >
+            Cindy Olivier
+          </Typography>
+          <Typography
+            variant="h4"
+            component="h1"
+            color="textSecondary"
+            align="center"
+            className={classes.title}
+          >
+            <FontAwesomeIcon icon={faCode} />
+          </Typography>
+          <Typography
+            variant="h4"
+            component="h1"
+            color="textSecondary"
+            align="center"
+            className={classes.title}
+          >
+            Développeuse web front-end
+          </Typography>
+        </Grid>
       </Grid>
-    </Grid>
     </div>
   );
 };
