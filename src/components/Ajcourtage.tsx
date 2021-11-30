@@ -1,8 +1,6 @@
 import React from "react";
 
-// import Button from "./Button";
 import Title from "./Title";
-import AjcourtageSite from "../images/AjcourtageSite.png";
 
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
@@ -109,7 +107,7 @@ const Ajcourtage = () => {
         </Grid>
       </div> */}
     </Grid>
-    <Grid
+    {/* <Grid
       container
       item
       xs={12}
@@ -117,8 +115,12 @@ const Ajcourtage = () => {
       alignContent="center"
       justify="center"
     >
-      <img className={classes.img} src={AjcourtageSite} alt="AjcourtageSite" />
-    </Grid>
+      <img
+            className={classes.img}
+            src="../images/ajcourtageSite.png"
+            alt="ajcourtage"
+          />
+    </Grid> */}
   </Grid>
 
   );
