@@ -1,6 +1,12 @@
 import React from "react";
 
-import { ThemeProvider } from "@material-ui/core";
+import {
+  createStyles,
+  Grid,
+  makeStyles,
+  Theme,
+  ThemeProvider,
+} from "@material-ui/core";
 import {
   faDumbbell,
   faProjectDiagram,
@@ -21,10 +27,23 @@ import ProjectPortfolio from "../components/ProjectPortfolio";
 import Ajcourtage from "../components/Ajcourtage";
 import { Link } from "react-router-dom";
 
+const useStyles = makeStyles((currentTheme: Theme) =>
+  createStyles({
+    containerLink: {
+      backgroundColor: "#111",
+    },
+    linkToAdds: {
+      width: "100%",
+      color: "white",
+    },
+  })
+);
+
 function App() {
-  return ( // TO HOME PAGE AND USE REACT ROUTER APP WITH SWITCH AND ROUTES
-    <div> 
-        <Link to="add">X</Link>
+  const classes = useStyles();
+
+  return (
+    <div>
       <ThemeProvider theme={currentTheme}>
         <Home />
         <Description />
@@ -42,6 +61,11 @@ function App() {
           <ProjectPokemon />
         </SectionContent>
         <Footer />
+        <Grid xs={12} className={classes.containerLink}>
+          <Link to="add" className={classes.linkToAdds}>
+            Go with Home Page with adds
+          </Link>
+        </Grid>
       </ThemeProvider>
     </div>
   );
